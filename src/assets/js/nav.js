@@ -41,4 +41,13 @@ document.querySelector('#cs-navigation').classList.add('scroll')
 	document.querySelector('#cs-navigation').classList.remove('scroll')
 	}
 });
+
+const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+        for (const item of faqItems) {
+            const onClick = () => {
+            item.classList.toggle('active')
+        }
+        item.addEventListener('click', onClick)
+        }
+                                
 							
