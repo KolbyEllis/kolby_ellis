@@ -277,38 +277,6 @@
             }
         }
 
-        ol,
-        ul {
-            padding-left: (24/16rem);
-            margin: 0 0 (32/16rem) 0;
-            color: var(--bodyTextColor);
-            display: flex;
-            flex-direction: column;
-            gap: (16/16rem);
-        }
-
-        ul {
-            li {
-                list-style: none;
-                color: inherit;
-                position: relative;
-
-                &:before {
-                    /* custom list bullet */
-                    content: "";
-                    width: 3px;
-                    height: 3px;
-                    background: currentColor;
-                    opacity: 1;
-                    border-radius: 50%;
-                    position: absolute;
-                    display: block;
-                    top: (10/16rem);
-                    left: (-12/16rem);
-                }
-            }
-        }
-
         img {
             width: 100%;
             height: auto;
@@ -442,29 +410,6 @@
             &:last-of-type {
                 margin: 0;
             }
-        }
-
-        .cs-ul {
-            width: 100%;
-            margin: 0 0 (24/16rem) 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: (12/16rem);
-        }
-
-        .cs-li {
-            font-size: var(--bodyFontSize);
-            list-style: none;
-            line-height: 1.5em;
-            width: 100%;
-            color: var(--bodyTextColor);
-            display: flex;
-            justify-content: flex-start;
-            /* push icon top the top so if the list item goes to two lines the icon stays at the top */
-            align-items: flex-start;
-            gap: (8/16rem);
         }
 
         .cs-icon {
