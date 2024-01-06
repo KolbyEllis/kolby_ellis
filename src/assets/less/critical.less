@@ -434,6 +434,23 @@
             gap: clamp(3rem, 6vw, 4rem);
         }
 
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            /* 16px - 40px */
+            padding: 0 clamp(1rem, 3.8vw, 2.5rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: center;
+        }
+
+        .cs-title {
+            max-width: 20ch;
+        }
+
         .cs-card-group {
             width: 100%;
             margin: 0;
@@ -679,9 +696,29 @@
 /* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
     #services-1338 {
-        margin-top: -15rem;
+        margin-top: -25rem;
     }
     #services-1338 .cs-item {
         grid-column: span 3;
     }
 }
+
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #services-1338 {
+            .cs-title,
+            .cs-text {
+                color: var(--bodyTextColorWhite);
+            }
+
+            .cs-text,
+            .cs-item-text {
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+                                
