@@ -1195,14 +1195,14 @@ html {
     opacity: 0.9;
   }
   #footer .right-section {
-    width: 96%;
+    width: 100%;
     max-width: 25.4375rem;
     margin: auto;
   }
   #footer .right-section .lists {
     width: 96%;
     max-width: 19.1875rem;
-    margin: auto;
+    margin: 2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1216,10 +1216,8 @@ html {
     margin-top: 0;
   }
   #footer .right-section .lists ul:nth-of-type(3) li {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    display: block; /* Change from flex to block */
+    margin-bottom: 0.75rem;
   }
   #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
     margin-bottom: 0;
@@ -1316,6 +1314,7 @@ html {
     text-align: left;
     height: 2.5rem;
     margin-left: 0;
+    padding-left: 2rem;
   }
   #footer .left-section p {
     text-align: left;
