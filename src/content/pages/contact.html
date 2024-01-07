@@ -63,41 +63,36 @@ permalink: 'contact/'
             </div>
         </div>
         <!--Form-->
-        <form class="cs-form" id="cs-form-1700" name="Contact Form" method="post" netlify>
+        <form class="cs-form" id="cs-form-1700" name="Contact Form" method="post" netlify autocomplete="on">
             <div class="cs-content">
                 <span class="cs-topper">Contact Us</span>
                 <h2 class="cs-title">Let's Collaborate</h2>
             </div>
             <label class="cs-label">
                 Name *
-                <input class="cs-input" required type="text" id="name-1700" name="name" placeholder="Name">
+                <input class="cs-input" required type="text" id="name-1700" name="name" placeholder="Name" autocomplete="name">
             </label>
             <label class="cs-label">
                 Email *
-                <input class="cs-input" required type="email" id="email-1700" name="email" placeholder="Email">
+                <input class="cs-input" required type="email" id="email-1700" name="email" placeholder="Email" autocomplete="email">
             </label>
             <label class="cs-label">
                 Phone
-                <input class="cs-input" type="number" id="phone-1700" name="phone" placeholder="Phone">
+                <input class="cs-input" type="tel" id="phone-1700" name="phone" placeholder="Phone" autocomplete="tel">
             </label>
             <label class="cs-label">
                 Message *
-                <textarea class="cs-input cs-textarea" required name="Message" id="message-1700"
-                        placeholder="Message"></textarea>
+                <textarea class="cs-input cs-textarea" required name="Message" id="message-1700" placeholder="Message" autocomplete="message"></textarea>
             </label>
             <button class="cs-button-solid cs-submit" type="submit">Schedule Consultation</button>
             <picture class="cs-background">
-                <!--Mobile Image-->
-                <source media="(max-width: 600px)"
-                        srcset="/assets/images/bridge.webp">
-                <!--Tablet and above Image-->
-                <source media="(min-width: 601px)"
-                        srcset="/assets/images/bridge.webp">
-                <img loading="lazy" decoding="async"
-                        src="/assets/images/bridge.webp"
-                        alt="bridge" width="650" height="613">
+                <!-- Mobile Image -->
+                <source media="(max-width: 600px)" srcset="/assets/images/bridge.webp">
+                <!-- Tablet and above Image -->
+                <source media="(min-width: 601px)" srcset="/assets/images/bridge.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/bridge.webp" alt="bridge" width="650" height="613">
             </picture>
-        </form>
+        </form>        
     </div>
 </section>
                                 

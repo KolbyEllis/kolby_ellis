@@ -1195,12 +1195,12 @@ html {
     opacity: 0.9;
   }
   #footer .right-section {
-    width: 96%;
+    width: 100%;
     max-width: 25.4375rem;
     margin: auto;
   }
   #footer .right-section .lists {
-    width: 96%;
+    width: 100%;
     max-width: 19.1875rem;
     margin: auto;
     display: flex;
