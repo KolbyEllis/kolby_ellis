@@ -11,7 +11,7 @@
     --secondary: #ffba43;
     --secondaryLight: #ffba43;
     --headerColor: #1a1a1a;
-    --bodyTextColor: #4e4b66;
+    --bodyTextColor: #000000;
     --bodyTextColorWhite: #fafbfc;
     /* 13px - 16px */
     --topperFontSize: clamp(0.8125rem, 1.6vw, 1rem);
@@ -1195,14 +1195,14 @@ html {
     opacity: 0.9;
   }
   #footer .right-section {
-    width: 100%;
+    width: 96%;
     max-width: 25.4375rem;
     margin: auto;
   }
   #footer .right-section .lists {
     width: 96%;
     max-width: 19.1875rem;
-    margin: 2rem;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1216,8 +1216,10 @@ html {
     margin-top: 0;
   }
   #footer .right-section .lists ul:nth-of-type(3) li {
-    display: block; /* Change from flex to block */
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
   }
   #footer .right-section .lists ul:nth-of-type(3) li:last-of-type {
     margin-bottom: 0;
@@ -1314,7 +1316,6 @@ html {
     text-align: left;
     height: 2.5rem;
     margin-left: 0;
-    padding-left: 2rem;
   }
   #footer .left-section p {
     text-align: left;
