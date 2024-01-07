@@ -168,7 +168,7 @@
     margin: 0 0 1rem 0;
   }
   #contact-1700 .cs-topper {
-    color: var(--secondary);
+    color: var(--primary);
   }
   #contact-1700 .cs-author {
     margin-top: 2.5rem;
@@ -261,7 +261,7 @@
     box-sizing: border-box;
     padding: 0 1.5rem;
     color: #fff;
-    background-color: var(--secondary);
+    background-color: var(--primary);
     border: none;
     display: inline-block;
     position: relative;
@@ -348,5 +348,12 @@
   body.dark-mode #contact-1700 .cs-input::placeholder {
     color: #fff;
     opacity: 0.8;
+  }
+  body.dark-mode #contact-1700 .cs-topper {
+    color: var(--secondary);
+  }
+  body.dark-mode #contact-1700 .cs-button-solid {
+    background-color: var(--secondary);
+    /* You can adjust the dark secondary color */
   }
 }

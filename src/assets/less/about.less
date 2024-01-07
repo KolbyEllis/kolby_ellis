@@ -226,7 +226,7 @@
             font-weight: 700;
             text-align: inherit;
             margin: 0 0 (16/16rem) 0;
-            color: var(--headerColor);
+            color: var(--primary);
         }
 
         h2 {
@@ -388,7 +388,7 @@
             line-height: 1.2em;
             font-weight: 700;
             margin: 0;
-            color: var(--headerColor);
+            color: var(--primary);
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -528,10 +528,11 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
+        #content-page-1398 .cs-box {
+            background-color: var(--primaryLight);
+        }
         #content-page-1398 {
             background-color: var(--dark);
-
-            .cs-title,
             .cs-text,
             h2,
             h3,
@@ -540,7 +541,7 @@
             h6,
             li,
             p {
-                color: var(--bodyTextColorWhite);
+                color: var(--primaryLight);
             }
             .cs-color,
             a {
@@ -558,7 +559,7 @@
             }
 
             .cs-h3 {
-                color: var(--bodyTextColorWhite);
+                color: var(--primaryLight);
             }
 
             .cs-icon {
@@ -628,17 +629,17 @@
         transition: border-bottom 0.3s;
     }
     #faq-351 .cs-faq-item.active {
-        border-color: var(--primaryLight);
+        border-color: var(--primary);
     }
     #faq-351 .cs-faq-item.active .cs-button {
-        color: var(--primaryLight);
+        color: var(--primary);
     }
     #faq-351 .cs-faq-item.active .cs-button:before {
-        background-color: var(--primaryLight);
+        background-color: var(--primary);
         transform: rotate(315deg);
     }
     #faq-351 .cs-faq-item.active .cs-button:after {
-        background-color: var(--primaryLight);
+        background-color: var(--primary);
         transform: rotate(-315deg);
     }
     #faq-351 .cs-faq-item.active .cs-item-p {

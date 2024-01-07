@@ -928,6 +928,9 @@ html {
   body.dark-mode #cs-navigation .cs-top-bar:before {
     opacity: 0.5;
   }
+  body.dark-mode #cs-navigation .cs-nav-button {
+    background-color: var(--secondary);
+  }
   body.dark-mode #cs-navigation .cs-logo {
     background-color: var(--medium);
   }
@@ -1174,6 +1177,7 @@ html {
     margin: auto;
     margin-bottom: 1.875em;
     display: inline-block;
+    scale: 4;
   }
   #footer .left-section .logo img {
     width: auto;
