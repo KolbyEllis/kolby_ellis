@@ -1253,7 +1253,7 @@ html {
     content: "";
     width: 6.0625rem;
     height: 0.125rem;
-    background: var(--primary);
+    background: var(--secondary);
     opacity: 1;
     display: block;
     position: absolute;
@@ -1282,7 +1282,7 @@ html {
   #footer .credit a {
     font-size: 1rem;
     text-decoration: none;
-    color: var(--primary);
+    color: white;
   }
   #footer .credit a:hover {
     text-decoration: underline;
@@ -1346,7 +1346,7 @@ html {
     content: "";
     width: 0%;
     height: 0.125rem;
-    background: var(--primary);
+    background: var(--);
     opacity: 1;
     display: block;
     position: absolute;
