@@ -52,12 +52,6 @@
     justify-content: center;
     align-items: center;
   }
-  #banner-1519 .cs-link:last-of-type {
-    /* remove the chevron on the last list item */
-  }
-  #banner-1519 .cs-link:last-of-type::after {
-    display: none;
-  }
   #banner-1519 .cs-link:after {
     /* chevron */
     content: '';

@@ -1216,7 +1216,7 @@ html {
     margin-top: 0;
   }
   #footer .right-section .lists ul:nth-of-type(3) li {
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
     display: flex;
     justify-content: flex-start;
     align-items: center;
