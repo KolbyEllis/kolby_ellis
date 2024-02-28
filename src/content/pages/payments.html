@@ -1,0 +1,73 @@
+---
+title: 'Contact'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/headshot.webp'
+permalink: 'payments/'
+---
+
+
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/payments.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-1525">
+    <div class="cs-container">
+        <div class="cs-content">
+            <h2 class="cs-topper">Kolby Web Designs</h2>
+
+            <p class="cs-title">Hello! Please fill out your payment details and click 'Submit'. Once received, I'll create an invoice using SquareUp for your payments. The first payment will be prorated for the amount of time your website was online this month, and the second payment will be set to recur monthly which you will receive on the first.</p>
+
+        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-1525" name="Card Number" method="post" netlify>
+            <label class="cs-label">
+                Card Number
+                <input class="cs-input" required type="text" id="name-1525" name="name" placeholder="Card Number">
+            </label>
+            <label class="cs-label">
+                Expiration
+                <input class="cs-input" required type="text" id="phone-1525" name="phone" placeholder="Expiration">
+            </label>
+            <label class="cs-label">
+                CVV
+                <input class="cs-input" required type="text" id="email-1525" name="email" placeholder="CVV">
+            </label>
+            <label class="cs-label">
+                ZIP
+                <input class="cs-input" required type="text" id="email-1525" name="email" placeholder="ZIP">
+            </label>
+            <label class="cs-label">
+                Name
+                <input class="cs-input" required type="text" id="email-1525" name="email" placeholder="Name">
+            </label>
+            <label class="cs-label">
+                Email
+                <input class="cs-input" required type="text" id="email-1525" name="email" placeholder="Email">
+            </label>
+
+            <button class="cs-button-solid cs-submit" type="submit">Send Message</button>
+        </form>
+    </div>
+    <!--Red Graphic-->
+    <img class="cs-floater cs-floater1" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/red-squiggle2.svg" alt="graphic" loading="lazy" decoding="async" width="312" height="222" aria-hidden="true">
+    <!--Leaf-->
+    <img class="cs-floater cs-floater2" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/leaf2.svg" alt="graphic" loading="lazy" decoding="async" width="207" height="211" aria-hidden="true">
+    <!--Back-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/speckle2-m.png">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/speckle2.png">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/speckle2.png" alt="speckle" width="1280" height="568">
+    </picture>
+</section>
+                                                           
+                                
+                                
+{% endblock %}
