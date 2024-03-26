@@ -1,66 +1,37 @@
-const schedule = require('node-schedule');
-const express = require('express');
-const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
-// Create a SMTP transporter
+// Create a Nodemailer transporter
 const transporter = nodemailer.createTransport({
-  service: 'Gmail',
-  auth: {
-    user: 'ketest12370@gmail.com',
-    pass: 'txlj fhaw fdip wkwp'
-  }
+    service: 'gmail',
+    auth: {
+        user: 'ketest12370@gmail.com',
+        pass: 'txlj fhaw fdip wkwp'
+    }
 });
 
-// Define the email content for scheduled emails
-const scheduledMailOptions = {
-  from: 'ketest12370@gmail.com',
-  to: 'ken.sunseeker@gmail.com',
-  subject: 'Kolby Ellis - Scheduled Email Test',
-  text: 'This is a test email I sent using nothing but handwritten code. Hoping I can expand upon it and make a database for scheduled emails but this at least proves it works.'
-};
+exports.handler = async (event, context) => {
+  const { email } = JSON.parse(event.body);
 
-// Schedule sending the email immediately
-transporter.sendMail(scheduledMailOptions, function(error, info) {
-  if (error) {
-    console.log('Error sending scheduled email:', error);
-  } else {
-    console.log('Scheduled email sent:', info.response);
-  }
-});
-
-const app = express();
-const port = 3000;
-
-// Middleware to parse request bodies as JSON
-app.use(bodyParser.json());
-
-// Route to handle POST requests to "/send-email"
-app.post('/send-email', (req, res) => {
-    // Extract email address from request body
-    const { email } = req.body;
-
-    // Define email options
-    const mailOptions = {
+  try {
+    // Send mail with defined transport object
+    let info = await transporter.sendMail({
         from: 'ketest12370@gmail.com',
         to: email,
-        subject: 'Subject of the email',
-        text: 'Body of the email'
-    };
-
-    // Send email
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.error('Error sending email:', error);
-            res.status(500).send('Error sending email');
-        } else {
-            console.log('Email sent:', info.response);
-            res.status(200).send('Email sent successfully');
-        }
+        subject: 'Thank you for subscribing!',
+        text: 'Thank you for subscribing to our newsletter and promotions!'
     });
-});
 
-// Start the server
-app.listen(port, () => {
-    console.log(`Server running at https://kolbyellis.netlify.app:${port}`);
-});
+    console.log('Email sent: ', info.messageId);
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Email sent successfully!' })
+    };
+  } catch (error) {
+    console.error('Error sending email: ', error);
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: 'Error sending email' })
+    };
+  }
+};
