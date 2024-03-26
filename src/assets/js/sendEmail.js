@@ -15,9 +15,9 @@ const transporter = nodemailer.createTransport({
 // Define the email content for scheduled emails
 const scheduledMailOptions = {
   from: 'ketest12370@gmail.com',
-  to: 'kolby.ellis@yahoo.com',
-  subject: 'Scheduled Email',
-  text: 'This is a scheduled email.'
+  to: 'ken.sunseeker@gmail.com',
+  subject: 'Kolby Ellis - Scheduled Email Test',
+  text: 'This is a test email I sent using nothing but handwritten code. Hoping I can expand upon it and make a database for scheduled emails but this at least proves it works.'
 };
 
 // Schedule sending the email immediately
@@ -62,5 +62,5 @@ app.post('/send-email', (req, res) => {
 
 // Start the server
 app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}`);
+    console.log(`Server running at https://kolbyellis.netlify.app:${port}`);
 });
