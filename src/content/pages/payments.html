@@ -81,10 +81,25 @@ permalink: 'payments/'
             <p class="cs-text">
                 Nulla dig nissimmi quis neque interdum. An Ohio man allegedly punched his lawyer in the face in court Tuesday upon finding out he was sentenced.
             </p>
-            <form class="cs-form" name="Contact Form" action="/send-email" method="post">
-                <input class="cs-input" type="email" id="cs-email-302-1612" name="find-us" placeholder="Email Address">
+            <form class="cs-form" name="Contact Form" action="/send-email" method="post" netlify>
+                <input class="cs-input" type="email" id="cs-email-302-1612" name="email" placeholder="Email Address">
                 <button class="cs-button-solid cs-submit" type="submit">Subscribe Now</button>
             </form>
+            
+            <script>
+                // Get the email input field
+                const emailInput = document.getElementById('cs-email-302-1612');
+            
+                // Add an event listener to listen for input changes
+                emailInput.addEventListener('input', function(event) {
+                    // Get the value of the email input field
+                    const email = event.target.value;
+            
+                    // Set the value of the 'to' field in the form to the entered email
+                    document.querySelector('form.cs-form').setAttribute('action', `/send-email?to=${email}`);
+                });
+            </script>
+            
         </div>
     </div>
     <!--Background Image-->
