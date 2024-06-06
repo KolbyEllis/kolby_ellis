@@ -1,37 +1,31 @@
 const nodemailer = require('nodemailer');
 
-// Create a Nodemailer transporter
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: 'ketest12370@gmail.com',
-        pass: 'txlj fhaw fdip wkwp'
-    }
-});
-
-exports.handler = async (event, context) => {
-  const { email } = JSON.parse(event.body);
-
-  try {
-    // Send mail with defined transport object
-    let info = await transporter.sendMail({
-        from: 'ketest12370@gmail.com',
-        to: email,
-        subject: 'Thank you for subscribing!',
-        text: 'Thank you for subscribing to our newsletter and promotions!'
+async function sendEmail(recipientEmail) {
+    // Create a Nodemailer transporter
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'ketest12370@gmail.com', // Your email address
+            pass: 'txlj fhaw fdip wkwp'  // Your email password
+        }
     });
 
-    console.log('Email sent: ', info.messageId);
+    // Email content
+    const mailOptions = {
+        from: 'ketest12370@gmail.com',   // Sender email address
+        to: recipientEmail,              // Receiver email address (dynamic)
+        subject: 'Test Email',          // Subject line
+        text: 'This is a test email.'   // Plain text body
+    };
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ message: 'Email sent successfully!' })
-    };
-  } catch (error) {
-    console.error('Error sending email: ', error);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: 'Error sending email' })
-    };
-  }
-};
+    try {
+        // Send email
+        const info = await transporter.sendMail(mailOptions);
+        console.log('Email sent: ', info.messageId);
+    } catch (error) {
+        console.error('Error sending email: ', error);
+    }
+}
+
+// Call the function to send the email with a dynamic recipient email address
+sendEmail('kolby.ellis@yahoo.com');
